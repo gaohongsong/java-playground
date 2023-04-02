@@ -1,6 +1,7 @@
 package com.onyx.springbootdemo;
 
 import com.onyx.springbootdemo.pojo.ResponseVo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,8 +11,13 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import java.util.HashMap;
+import java.util.Map;
+
+/* 全局参数错误处理 */
 @ControllerAdvice
-public class ValidateCommonHandler extends ResponseEntityExceptionHandler {
+@Slf4j
+public class ValidateErrorHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException ex,
@@ -21,11 +27,18 @@ public class ValidateCommonHandler extends ResponseEntityExceptionHandler {
         ResponseVo respVo = new ResponseVo();
         respVo.setCode(500);
 
+        // Map<String, String> errors = new HashMap<>();
+
         for (FieldError fieldError : ex.getBindingResult().getFieldErrors()) {
-            String defaultMessage = fieldError.getDefaultMessage();
-            respVo.setMessage(defaultMessage);
-            Object value =fieldError.getRejectedValue();
-            respVo.setData(value);
+            String fieldName = fieldError.getField();
+            String errorMessage = fieldError.getDefaultMessage();
+            Object fieldValue = fieldError.getRejectedValue();
+            // errors.put(fieldName, errorMessage);
+
+            // 遇到第一个错误就返回
+            errorMessage = "[" + fieldName + "]" + errorMessage;
+            respVo.setMessage(errorMessage);
+            respVo.setData(fieldValue);
             break;
         }
 
