@@ -11,13 +11,10 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /* 全局参数错误处理 */
 @ControllerAdvice
 @Slf4j
-public class ValidateErrorHandler extends ResponseEntityExceptionHandler {
+public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException ex,
@@ -45,3 +42,30 @@ public class ValidateErrorHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(respVo, HttpStatus.OK);
     }
 }
+
+
+/*
+@ControllerAdvice
+public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
+
+    @Override
+    protected ResponseEntity<Object> handleMethodArgumentNotValid(
+            MethodArgumentNotValidException exception,
+            HttpHeaders httpHeaders, HttpStatus httpStatus, WebRequest webRequest
+    ) {
+        Map<String, Object> objectBody = new LinkedHashMap<>();
+        objectBody.put("Current Timestamp", new Date());
+        objectBody.put("Status", httpStatus.value());
+
+        // Get all errors
+        List<String> exceptionalErrors = exception.getBindingResult()
+                .getFieldErrors()
+                .stream()
+                .map(x -> x.getDefaultMessage())
+                .collect(Collectors.toList());
+
+        objectBody.put("Errors", exceptionalErrors);
+
+        return new ResponseEntity<>(objectBody, httpStatus);
+    }
+}*/
