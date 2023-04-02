@@ -46,7 +46,7 @@ public class UserController2 {
 
     @GetMapping("/filter")
     @ApiOperation("filter")
-    public Iterable<User> filterUsers(@RequestParam String username) {
+    public User filterUsers(@RequestParam String username) {
         return userRepository.findByUsername(username);
     }
 }
