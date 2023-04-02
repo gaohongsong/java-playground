@@ -17,6 +17,7 @@ public class UserController2 {
 
     @PostMapping("/save")
     public ResponseEntity<String> saveUser(@Valid @RequestBody User user) {
+        // https://www.geeksforgeeks.org/spring-boot-validation-using-hibernate-validator/
         userRepository.save(user);
         return ResponseEntity.ok("created");
     }
