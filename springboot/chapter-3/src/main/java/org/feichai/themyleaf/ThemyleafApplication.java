@@ -1,6 +1,6 @@
 package org.feichai.themyleaf;
 
-import org.feichai.themyleaf.event.SpringStartEventListener;
+import org.feichai.themyleaf.event.listeners.SpringStartEventListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

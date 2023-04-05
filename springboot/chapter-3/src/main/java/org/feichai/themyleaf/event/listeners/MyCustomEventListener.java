@@ -1,6 +1,7 @@
-package org.feichai.themyleaf.event;
+package org.feichai.themyleaf.event.listeners;
 
 import lombok.extern.slf4j.Slf4j;
+import org.feichai.themyleaf.event.MyCustomEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
