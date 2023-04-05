@@ -1,0 +1,4 @@
+- DO: Data Object, 与数据库表对应，通过dao层向上传输对象
+- DTO: Data Transfer Object, Service向外传输的对象
+- BO: Business Object，业务对象，Service层输出的封装业务逻辑的对象
+- VO: View Object，向模板渲染引擎提供的对象

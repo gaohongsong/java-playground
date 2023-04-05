@@ -1,4 +1,4 @@
-package org.feichai.themyleaf;
+package org.feichai.themyleaf.config;
 
 import org.feichai.themyleaf.interceptor.LoginRequiredInterceptor;
 import org.feichai.themyleaf.interceptor.RequestLoggingInterceptor;
