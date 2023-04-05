@@ -1,4 +1,4 @@
-package org.feichai.themyleaf;
+package org.feichai.themyleaf.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

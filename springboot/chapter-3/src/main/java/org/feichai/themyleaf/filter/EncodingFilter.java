@@ -9,7 +9,8 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Slf4j
-@Component
+// 暂不开启，方便演示
+// @Component
 public class EncodingFilter implements Filter {
 
     @Override
