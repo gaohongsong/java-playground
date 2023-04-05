@@ -39,7 +39,7 @@ public class HelloController {
      */
     @GetMapping({"/hello", "/403/hello", "/api/hello"})
     public String hello(
-            @RequestParam(name = "name", required = false) String name,
+            @RequestParam(name = "name", required = true) String name,
             @RequestParam(name = "age", required = false) Integer age
     ) {
         log.error("hello handle request with name={} and age={}", name, age);

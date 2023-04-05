@@ -23,7 +23,7 @@ public class LoginRequiredInterceptor implements HandlerInterceptor {
         // 登录/授权过滤器
         // http://localhost:8080/api/hello?name=pitou&age=18&continue
         if (MiscUtils.loginCheckFailed(new String[]{
-                "/api/**",
+                "/api/hello",
                 "/admin/**"
         }, requestURI)) {
             String errMsg = "403: Login Required!";
