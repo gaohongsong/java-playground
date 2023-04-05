@@ -15,7 +15,7 @@ public class RedisTests {
     @Autowired
     private RedisTemplate<String, String> stringRedisTemplate;
     @Autowired
-    private RedisTemplate<String, Object> redisObjectTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
     // @Autowired
     // private RedisTemplate<String, Serializable> redisTemplate;
 
@@ -33,8 +33,8 @@ public class RedisTests {
         result.setData(100);
         result.setMessage("success");
         result.setCode(0);
-        redisObjectTemplate.opsForValue().set("result", result);
-        Assertions.assertEquals(result, (Result)redisObjectTemplate.opsForValue().get("result"));
+        redisTemplate.opsForValue().set("result", result);
+        Assertions.assertEquals(result, (Result)redisTemplate.opsForValue().get("result"));
     }
 
     // @Test
