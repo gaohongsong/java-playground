@@ -5,9 +5,15 @@ import lombok.Data;
 import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
 
+import java.io.Serial;
+import java.io.Serializable;
+
 @ToString
 @Data
-public class User {
+public class User implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @NotBlank(message = "姓名不能为空")
     @Length(max = 8, min=1, message = "名字不得超过8个字符")
     private String name;
