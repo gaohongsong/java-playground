@@ -1,4 +1,4 @@
-package com.onyx.springbootdemo;
+package com.onyx.springbootdemo.config;
 
 import com.onyx.springbootdemo.resource.UserResource;
 import io.swagger.annotations.Api;
