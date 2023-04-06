@@ -1,14 +1,24 @@
 package org.feichai;
 
 import org.feichai.patterns.Singleton;
+import org.feichai.patterns.adapter.Adapter;
+import org.feichai.patterns.adapter.Target;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("hello");
         testSingleton();
+        testAdapter();
+    }
+
+    public static void testAdapter() {
+        System.out.println("run testAdapter");
+        Target target = new Adapter();
+        target.request();
+        System.out.println("-------------------------------");
     }
 
     public static void testSingleton() {
+        System.out.println("run testSingleton");
         Singleton singleton1 = Singleton.getSingleton();
         Singleton singleton2 = Singleton.getSingleton();
 
@@ -18,5 +28,6 @@ public class Main {
         singleton1.doSomething();
         System.out.println(singleton1);
         System.out.println(singleton2);
+        System.out.println("-------------------------------");
     }
 }
