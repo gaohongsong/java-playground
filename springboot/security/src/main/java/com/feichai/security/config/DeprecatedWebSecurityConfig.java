@@ -28,10 +28,16 @@ public class DeprecatedWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         // auth.authenticationProvider(authenticationProvider());
-        auth.inMemoryAuthentication()
-                .withUser("user").password(passwordEncoder().encode("12345")).roles("teacher")
-                .and()
-                .withUser("admin").password(passwordEncoder().encode("12345")).roles("admin");
+
+        // another way
+        auth.userDetailsService(userDetailsService)
+                .passwordEncoder(myPasswordEncoder());
+
+        // test only
+        // auth.inMemoryAuthentication()
+        //         .withUser("user").password(passwordEncoder().encode("12345")).roles("teacher")
+        //         .and()
+        //         .withUser("admin").password(passwordEncoder().encode("12345")).roles("admin");
     }
 
     @Override
@@ -65,14 +71,14 @@ public class DeprecatedWebSecurityConfig extends WebSecurityConfigurerAdapter {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
 
         provider.setHideUserNotFoundExceptions(false);
-        provider.setPasswordEncoder(passwordEncoder());
+        provider.setPasswordEncoder(myPasswordEncoder());
         provider.setUserDetailsService(userDetailsService);
 
         return provider;
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public PasswordEncoder myPasswordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 }

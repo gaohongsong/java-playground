@@ -8,6 +8,15 @@
 <p>欢迎您，用户名:<span sec:authentication="name"></span>,当前用户角色位:
     <span sec:authentication="principal.authorities"></span></p>
 <h1>登录成功</h1>
+
+<div sec:authorize="isAuthenticated()">
+    Text visible only to authenticated users.
+</div>
+Authenticated username:
+<div sec:authentication="name"></div>
+Authenticated user roles:
+<div sec:authentication="principal.authorities"></div>
+
 <a th:href="@{/logout}">退出</a>
 <ul>
     <li sec:authorize="hasAnyRole('ROLE_admin')"><a th:href="@{/role/admin}">管理员数据</a></li>

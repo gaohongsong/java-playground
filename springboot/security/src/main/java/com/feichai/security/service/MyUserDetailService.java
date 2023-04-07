@@ -42,6 +42,17 @@ public class MyUserDetailService implements UserDetailsService {
         for (Authority authority : myUser.getMy_authorities()) {
             authorities.add(new SimpleGrantedAuthority(authority.getAuthority()));
         }
-        return new User(myUser.getUsername(), myUser.getPassword(), authorities);
+        // 说明账号存在 {noop} 非加密的使用
+        authorities.add(new SimpleGrantedAuthority("ROLE_admin"));
+        return new User(
+                myUser.getUsername(),
+                "{noop}" + myUser.getPassword(),
+                true,
+                true,
+                true,
+                true,
+                // false,
+                authorities
+        );
     }
 }
