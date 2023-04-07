@@ -1,6 +1,7 @@
 package com.feichai.security.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity(name = "t_my_user")
+@NoArgsConstructor
 // @Table(name = "t_my_user")
 public class MyUser {
     @Id
@@ -29,4 +31,9 @@ public class MyUser {
             inverseJoinColumns = @JoinColumn(name = "ref_authority_id", referencedColumnName = "id")
     )
     private Set<Authority> my_authorities = new HashSet<>();
+
+    public MyUser(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 }

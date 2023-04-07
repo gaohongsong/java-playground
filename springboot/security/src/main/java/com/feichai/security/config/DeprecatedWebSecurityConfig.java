@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
@@ -35,9 +36,9 @@ public class DeprecatedWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         // test only
         // auth.inMemoryAuthentication()
-        //         .withUser("user").password(passwordEncoder().encode("12345")).roles("teacher")
+        //         .withUser("user").password(myPasswordEncoder().encode("12345")).roles("teacher")
         //         .and()
-        //         .withUser("admin").password(passwordEncoder().encode("12345")).roles("admin");
+        //         .withUser("admin").password(myPasswordEncoder().encode("12345")).roles("admin");
     }
 
     @Override
@@ -56,13 +57,11 @@ public class DeprecatedWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/loginPage", "/hello", "/exception", "/*.jpg").permitAll()
                 .anyRequest().authenticated();
 
-        http.logout().logoutUrl("/logout");
-        http.logout().permitAll();
+        http.logout().logoutUrl("/logout").permitAll();
 
         http.rememberMe()
                 .tokenRepository(persistentTokenRepository)
-                // 10s
-                .tokenValiditySeconds(10)
+                .tokenValiditySeconds(60 * 60)
                 .userDetailsService(userDetailsService);
     }
 
@@ -79,6 +78,12 @@ public class DeprecatedWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder myPasswordEncoder() {
+        // 根据密码选择encoder（比如，可以识别明文密码：{noop}）?
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
+
+    // @Bean
+    // public BCryptPasswordEncoder myPasswordEncoder() {
+    //     return new BCryptPasswordEncoder();
+    // }
 }

@@ -1,6 +1,7 @@
 package com.feichai.security.service;
 
 import com.feichai.security.exception.UserNotExistException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import com.feichai.security.model.Authority;
 import com.feichai.security.model.MyUser;
 import com.feichai.security.repository.MyUserRepository;
@@ -30,12 +31,13 @@ public class MyUserDetailService implements UserDetailsService {
 
     @Override
     @Transactional
-    public UserDetails loadUserByUsername(String username) {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         MyUser myUser = myUserRepository.findMyUserByUsername(username);
 
         if (myUser == null) {
             log.error("用户 {} 不存在!", username);
-            throw new UserNotExistException(String.format("用户 %s 不存在", username));
+            throw new UsernameNotFoundException(String.format("用户 %s 不存在", username));
+            // throw new UserNotExistException(String.format("用户 %s 不存在", username));
         }
 
         ArrayList<GrantedAuthority> authorities = new ArrayList<>();
@@ -46,7 +48,8 @@ public class MyUserDetailService implements UserDetailsService {
         authorities.add(new SimpleGrantedAuthority("ROLE_admin"));
         return new User(
                 myUser.getUsername(),
-                "{noop}" + myUser.getPassword(),
+                // "{noop}" + myUser.getPassword(),
+                myUser.getPassword(),
                 true,
                 true,
                 true,

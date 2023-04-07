@@ -2,6 +2,7 @@ package com.feichai.security.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,7 +20,9 @@ public class MyExceptionHandler {
         mv.setViewName("error");
 
         if (e instanceof BadCredentialsException) {
-            mv.addObject("msg", "密码错误");
+            mv.addObject("msg", "用户不存在或用户密码不一致！");
+        } else if (e instanceof AccessDeniedException) {
+            mv.addObject("msg", "无权访问！");
         } else {
             mv.addObject("msg", e.getMessage());
         }
