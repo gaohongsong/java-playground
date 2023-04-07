@@ -11,8 +11,8 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "t_persistent_login")
-public class PersistentLogin {
+@Table(name = "persistent_logins")
+public class PersistentLogins {
     @Id
     private String series;
     private String username;
