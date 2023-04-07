@@ -1,12 +1,13 @@
 package feichai.mybatis.service;
 
-import feichai.mybatis.dao.AuthoritiesDao;
-import feichai.mybatis.dao.MyUserDao;
-import feichai.mybatis.model.Authority;
-import feichai.mybatis.model.MyUser;
+import feichai.mybatis.entity.TAuthority;
+import feichai.mybatis.entity.TMyUser;
+import feichai.mybatis.entity.mapper.AuthorityMapper;
+import feichai.mybatis.entity.mapper.MyUserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -26,19 +27,20 @@ import java.util.Set;
  * AService也不能直接去调用BService，遵循高内聚低耦合原则
  */
 @Slf4j
-@Service("myUserDetailsService")
-// @Primary
-public class MyUserDetailService implements UserDetailsService {
-    @Autowired
-    private MyUserDao myUserDao;
+@Service
+@Primary
+public class TMyUserDetailService implements UserDetailsService {
 
     @Autowired
-    private AuthoritiesDao authoritiesDao;
+    private MyUserMapper myUserMapper;
+
+    @Autowired
+    private AuthorityMapper authorityMapper;
 
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        MyUser myUser = myUserDao.findByUsername(username);
+        TMyUser myUser = myUserMapper.findByUsername(username);
 
         if (myUser == null) {
             log.error("用户 {} 不存在!", username);
@@ -46,10 +48,10 @@ public class MyUserDetailService implements UserDetailsService {
             // throw new UserNotExistException(String.format("用户 %s 不存在", username));
         }
 
-        Set<Authority> authoritySet = authoritiesDao.findByUserId(myUser.getId());
+        Set<TAuthority> authoritySet = authorityMapper.findByUserId(myUser.getId());
 
         ArrayList<GrantedAuthority> authorities = new ArrayList<>();
-        for (Authority authority : authoritySet) {
+        for (TAuthority authority : authoritySet) {
             authorities.add(new SimpleGrantedAuthority(authority.getAuthority()));
         }
 

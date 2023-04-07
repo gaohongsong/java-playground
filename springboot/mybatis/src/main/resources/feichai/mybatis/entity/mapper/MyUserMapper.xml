@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="feichai.mybatis.entity.mapper.MyUserMapper">
+
+    <resultMap id="BaseResultMap" type="feichai.mybatis.entity.TMyUser">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,password,username
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_my_user
+        where  id = #{id,jdbcType=INTEGER} 
+    </select>
+    <select id="findByUsername" resultType="feichai.mybatis.entity.TMyUser">
+        select <include refid="Base_Column_List"/>
+        from t_my_user
+        where username = #{username}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from t_my_user
+        where  id = #{id,jdbcType=INTEGER} 
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="feichai.mybatis.entity.TMyUser" useGeneratedKeys="true">
+        insert into t_my_user
+        ( id,password,username
+        )
+        values (#{id,jdbcType=INTEGER},#{password,jdbcType=VARCHAR},#{username,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="feichai.mybatis.entity.TMyUser" useGeneratedKeys="true">
+        insert into t_my_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="id != null">id,</if>
+                <if test="password != null">password,</if>
+                <if test="username != null">username,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="id != null">#{id,jdbcType=INTEGER},</if>
+                <if test="password != null">#{password,jdbcType=VARCHAR},</if>
+                <if test="username != null">#{username,jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="feichai.mybatis.entity.TMyUser">
+        update t_my_user
+        <set>
+                <if test="password != null">
+                    password = #{password,jdbcType=VARCHAR},
+                </if>
+                <if test="username != null">
+                    username = #{username,jdbcType=VARCHAR},
+                </if>
+        </set>
+        where   id = #{id,jdbcType=INTEGER} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="feichai.mybatis.entity.TMyUser">
+        update t_my_user
+        set 
+            password =  #{password,jdbcType=VARCHAR},
+            username =  #{username,jdbcType=VARCHAR}
+        where   id = #{id,jdbcType=INTEGER} 
+    </update>
+</mapper>
