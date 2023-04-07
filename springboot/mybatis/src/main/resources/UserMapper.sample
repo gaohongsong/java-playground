@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--   https会导致idea无法提示  -->
+
+<mapper namespace="org.feichai.mapper.UserMapper">
+    <resultMap id="userMap" type="org.feichai.model.User">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <select id="selectById" resultType="org.feichai.model.User" parameterType="int">
+        select * from user where id = #{id};
+    </select>
+    <select id="selectAll" resultType="org.feichai.model.User">
+        select *
+        from user;
+    </select>
+    <select id="filterBy" resultMap="userMap" timeout="60" statementType="PREPARED">
+        SELECT *
+        FROM user
+        <where>
+            <if test="email != null and email != ''">
+                AND email = #{email}
+            </if>
+            <if test="password != null and password != ''">
+                AND password = #{password}
+            </if>
+        </where>
+    </select>
+    <select id="filterBySingle" resultMap="userMap">
+        SELECT *
+        FROM user
+        <where>
+            <choose>
+                <when test="name != null and name != ''">
+                    name LIKE #{name}
+                </when>
+                <when test="email != null and email != ''">
+                    email = #{email}
+                </when>
+            </choose>
+        </where>
+    </select>
+    <select id="filterByList" resultMap="userMap">
+        SELECT *
+        FROM user
+        <where>
+            <foreach collection="addressList" item="email" index="index" nullable="true"
+                     open="email in (" separator="," close=")">
+                #{email}
+            </foreach>
+        </where>
+    </select>
+
+    <insert id="create" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user (name, password, email)
+        VALUES (#{name}, #{password}, #{email});
+    </insert>
+    <insert id="bulkCreate" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user (name, password, email) VALUES
+        <foreach collection="users" item="user" separator=",">
+            (#{user.name}, #{user.password}, #{user.email})
+        </foreach>
+    </insert>
+
+    <delete id="deleteById">
+        DELETE
+        FROM user
+        WHERE id = #{id};
+    </delete>
+    <delete id="deleteByIds">
+        DELETE
+        FROM user
+        WHERE id IN
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+
+    </delete>
+
+    <update id="update">
+        UPDATE user
+        <set>
+            <!--trim prefix="SET" prefixOverrides=","-->
+            <if test="name != null">name=#{name},</if>
+            <if test="password != null">password=#{password},</if>
+            <if test="email != null">email=#{email},</if>
+            <!--/trim-->
+        </set>
+        WHERE id=#{id}
+    </update>
+</mapper>
