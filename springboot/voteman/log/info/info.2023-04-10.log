@@ -1,0 +1,185 @@
+00:03:41.333 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on 192.168.88.198 with PID 25294 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+00:03:41.335 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+00:03:41.679 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:03:41.679 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:03:41.699 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+00:03:41.992 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+00:03:41.996 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+00:03:41.996 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:03:41.997 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+00:03:42.042 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:03:42.042 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 669 ms
+00:03:42.115 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+00:03:42.367 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+00:03:42.393 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+00:03:42.394 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+00:03:42.401 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+00:04:08.078 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on 192.168.88.198 with PID 25508 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+00:04:08.079 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+00:04:08.438 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:04:08.439 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:04:08.462 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+00:04:08.757 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+00:04:08.761 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+00:04:08.762 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:04:08.762 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+00:04:08.811 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:04:08.812 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 693 ms
+00:04:08.918 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+00:04:09.215 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+00:04:09.242 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+00:04:09.244 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+00:04:09.252 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+00:04:30.241 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on 192.168.88.198 with PID 25626 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+00:04:30.242 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+00:04:30.578 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:04:30.578 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:04:30.602 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+00:04:30.898 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+00:04:30.905 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+00:04:30.905 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:04:30.905 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+00:04:30.963 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:04:30.963 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 682 ms
+00:04:31.039 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+00:04:31.301 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+00:04:31.406 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+00:04:31.407 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+00:04:31.415 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+00:05:20.228 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on 192.168.88.198 with PID 25857 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+00:05:20.229 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+00:05:20.550 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:05:20.550 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:05:20.567 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+00:05:20.837 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+00:05:20.840 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+00:05:20.840 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:05:20.840 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+00:05:20.887 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:05:20.887 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 622 ms
+00:05:20.960 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+00:05:21.223 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+00:05:21.390 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+00:05:21.391 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+00:05:21.398 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+00:08:20.720 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on 192.168.88.198 with PID 26652 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+00:08:20.721 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+00:08:21.073 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:08:21.074 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:08:21.090 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+00:08:21.401 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+00:08:21.413 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+00:08:21.413 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:08:21.413 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+00:08:21.462 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:08:21.462 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 696 ms
+00:08:21.536 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+00:08:21.907 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+00:08:22.263 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+00:08:22.368 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+00:08:22.369 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+00:08:22.376 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+00:08:57.390 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on 192.168.88.198 with PID 26846 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+00:08:57.391 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+00:08:57.700 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:08:57.700 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:08:57.715 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+00:08:57.993 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+00:08:57.997 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+00:08:57.997 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:08:57.997 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+00:08:58.045 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:08:58.045 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 622 ms
+00:08:58.113 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+00:08:58.368 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+00:08:58.722 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+00:08:58.821 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+00:08:58.822 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+00:08:58.829 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+00:10:33.478 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on 192.168.88.198 with PID 27145 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+00:10:33.479 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+00:10:33.822 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:10:33.823 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:10:33.840 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+00:10:34.126 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+00:10:34.130 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+00:10:34.130 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:10:34.130 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+00:10:34.176 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:10:34.176 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 665 ms
+00:10:34.239 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+00:10:34.493 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+00:10:34.850 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+00:10:34.943 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+00:10:34.944 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+00:10:34.951 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+00:12:18.238 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on 192.168.88.198 with PID 27655 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+00:12:18.239 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+00:12:18.576 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:12:18.577 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:12:18.592 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+00:12:18.836 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+00:12:18.839 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+00:12:18.839 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:12:18.840 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+00:12:18.881 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:12:18.881 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 608 ms
+00:12:18.942 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+00:12:19.207 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+00:12:19.578 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+00:12:19.858 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+00:12:19.859 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+00:12:19.866 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+09:41:42.691 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 33470 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+09:41:42.692 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+09:41:43.012 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+09:41:43.012 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+09:41:43.028 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+09:41:43.276 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+09:41:43.280 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+09:41:43.280 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:41:43.280 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+09:41:43.325 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:41:43.325 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 598 ms
+09:41:43.388 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+09:41:43.631 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+09:41:44.014 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+09:41:44.286 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+09:41:44.287 febs [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+09:41:44.294 febs [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+09:49:07.723 febs [main] INFO  org.feichai.FeichaiApplication - Starting FeichaiApplication using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 35360 (/Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/target/classes started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+09:49:07.725 febs [main] INFO  org.feichai.FeichaiApplication - The following 1 profile is active: "dev"
+09:49:08.059 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+09:49:08.059 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+09:49:08.075 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+09:49:08.327 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+09:49:08.331 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+09:49:08.331 febs [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:49:08.332 febs [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+09:49:08.380 febs [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:49:08.380 febs [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 619 ms
+09:49:08.455 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+09:49:08.837 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+09:49:09.090 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+09:49:09.477 febs [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+09:49:09.484 febs [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+09:49:09.490 febs [main] INFO  org.feichai.FeichaiApplication - Started FeichaiApplication in 1.982 seconds (JVM running for 2.322)
+09:49:15.067 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
