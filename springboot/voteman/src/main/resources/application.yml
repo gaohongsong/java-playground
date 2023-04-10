@@ -22,7 +22,7 @@ spring:
     active: dev
 
   datasource:
-    url: jdbc:mysql://localhost:3306/security?characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/voteman?characterEncoding=utf-8
     username: root
     password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
