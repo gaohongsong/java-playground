@@ -20,7 +20,7 @@
     <result column="AVATAR" jdbcType="VARCHAR" property="avatar" />
     <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
   </resultMap>
-    <select id="findUserWithDept" resultType="org.feichai.system.domain.User" parameterType="org.feichai.system.domain.User">
+    <select id="findUserWithDept" resultMap="BaseResultMap" parameterType="org.feichai.system.domain.User">
       select u.user_id, u.username, u.email, u.mobile, u.status, u.crate_time, u.ssex, d.dept_name
       from t_user u
           left join t_dept d on u.DEPT_ID = d.DEPT_ID

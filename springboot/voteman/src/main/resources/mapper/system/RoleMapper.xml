@@ -11,4 +11,13 @@
     <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
     <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
   </resultMap>
+    <select id="findUserRole" resultMap="BaseResultMap">
+      select tr.*
+      FROM
+        t_role tr
+          LEFT JOIN t_user_role tur ON tr.ROLE_ID=tur.ROLE_ID
+          LEFT JOIN t_user tu ON tu.USER_ID = tur.USER_ID
+      WHERE
+        tu.USERNAME = #{userName};
+    </select>
 </mapper>

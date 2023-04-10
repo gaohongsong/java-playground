@@ -355,3 +355,80 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 17:51:11.604 febs [main] INFO  o.f.s.s.impl.UserServiceImplTest - Started UserServiceImplTest in 2.22 seconds (JVM running for 2.62)
 17:51:11.605 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
 17:51:11.853 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+20:29:41.636 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Starting RoleServiceImplTest using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 42058 (started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+20:29:41.637 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - The following 1 profile is active: "dev"
+20:29:41.973 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+20:29:41.974 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:29:41.993 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+20:29:42.265 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+20:29:42.646 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:29:43.118 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+20:29:43.648 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Started RoleServiceImplTest in 2.185 seconds (JVM running for 2.582)
+20:29:43.649 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
+20:29:43.912 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+20:30:27.485 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Starting RoleServiceImplTest using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 42272 (started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+20:30:27.485 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - The following 1 profile is active: "dev"
+20:30:27.937 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+20:30:27.938 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:30:27.964 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+20:30:28.259 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+20:30:28.682 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:30:29.193 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+20:30:29.806 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Started RoleServiceImplTest in 2.507 seconds (JVM running for 2.923)
+20:30:29.807 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
+20:30:30.091 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+20:32:12.462 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Starting RoleServiceImplTest using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 43040 (started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+20:32:12.463 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - The following 1 profile is active: "dev"
+20:32:12.790 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+20:32:12.792 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:32:12.808 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+20:32:13.069 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+20:32:13.394 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:32:13.858 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+20:32:14.428 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Started RoleServiceImplTest in 2.137 seconds (JVM running for 2.537)
+20:32:14.429 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
+20:32:14.661 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+20:32:56.388 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Starting RoleServiceImplTest using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 43360 (started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+20:32:56.388 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - The following 1 profile is active: "dev"
+20:32:56.702 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+20:32:56.703 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:32:56.719 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+20:32:56.981 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+20:32:57.317 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:32:57.777 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+20:32:58.338 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Started RoleServiceImplTest in 2.128 seconds (JVM running for 2.592)
+20:32:58.339 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
+20:32:58.589 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+20:37:36.111 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Starting RoleServiceImplTest using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 44897 (started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+20:37:36.111 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - The following 1 profile is active: "dev"
+20:37:36.424 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+20:37:36.425 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:37:36.442 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+20:37:36.704 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+20:37:37.038 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:37:37.495 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+20:37:38.043 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Started RoleServiceImplTest in 2.108 seconds (JVM running for 2.51)
+20:37:38.043 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
+20:37:38.288 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+20:38:09.444 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Starting RoleServiceImplTest using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 45324 (started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+20:38:09.445 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - The following 1 profile is active: "dev"
+20:38:09.768 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+20:38:09.769 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:38:09.785 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+20:38:10.039 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+20:38:10.370 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:38:10.826 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+20:38:11.395 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Started RoleServiceImplTest in 2.27 seconds (JVM running for 2.674)
+20:38:11.397 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
+20:38:11.635 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+20:38:29.670 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Starting RoleServiceImplTest using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 45429 (started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+20:38:29.671 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - The following 1 profile is active: "dev"
+20:38:29.986 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+20:38:29.988 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:38:30.004 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+20:38:30.275 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+20:38:30.599 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:38:31.083 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+20:38:31.644 febs [main] INFO  o.f.s.s.impl.RoleServiceImplTest - Started RoleServiceImplTest in 2.149 seconds (JVM running for 2.548)
+20:38:31.645 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
+20:38:31.890 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
