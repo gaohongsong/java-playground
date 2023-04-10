@@ -687,3 +687,4 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'security.t_user' doesn't exi
 17:37:45.122 febs [main] ERROR o.f.common.config.MyWebAppConfigurer - mImagePath: /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/media/images/
 17:47:39.089 febs [main] ERROR o.f.common.config.MyWebAppConfigurer - mImagePath: /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/media/images/
 17:48:05.147 febs [main] ERROR o.f.common.config.MyWebAppConfigurer - mImagePath: /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/media/images/
+17:51:11.092 febs [main] ERROR o.f.common.config.MyWebAppConfigurer - mImagePath: /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/media/images/

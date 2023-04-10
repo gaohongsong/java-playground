@@ -344,3 +344,14 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 17:48:05.690 febs [main] INFO  o.f.s.s.impl.UserServiceImplTest - Started UserServiceImplTest in 2.165 seconds (JVM running for 2.559)
 17:48:05.691 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
 17:48:05.955 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+17:51:09.558 febs [main] INFO  o.f.s.s.impl.UserServiceImplTest - Starting UserServiceImplTest using Java 18.0.2.1 on gaomugongdeMacBook-Pro-2.local with PID 20849 (started by gaomugong in /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman)
+17:51:09.558 febs [main] INFO  o.f.s.s.impl.UserServiceImplTest - The following 1 profile is active: "dev"
+17:51:09.888 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+17:51:09.890 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:51:09.908 febs [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+17:51:10.187 febs [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+17:51:10.573 febs [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+17:51:11.057 febs [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+17:51:11.604 febs [main] INFO  o.f.s.s.impl.UserServiceImplTest - Started UserServiceImplTest in 2.22 seconds (JVM running for 2.62)
+17:51:11.605 febs [main] INFO  org.feichai.FeichaiApplication - start commandline runner
+17:51:11.853 febs [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
