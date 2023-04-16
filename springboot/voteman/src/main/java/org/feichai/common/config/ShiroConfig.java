@@ -142,11 +142,13 @@ public class ShiroConfig {
         // 免认证路由配置
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
 
+        System.out.println("-------------------------");
+        System.out.println(shiroProperties.getAnonUrl());
+        System.out.println(shiroProperties.getLoginUrl());
         String[] anonUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(shiroProperties.getAnonUrl(), ",");
-        for (String url :
-                anonUrls) {
-            filterChainDefinitionMap.put(url, "anon");
-        }
+//        for (String url : anonUrls) {
+//            filterChainDefinitionMap.put(url, "anon");
+//        }
 
         filterChainDefinitionMap.put(shiroProperties.getLogoutUrl(), "logout");
         filterChainDefinitionMap.put("/**", "user");

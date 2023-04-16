@@ -132,7 +132,7 @@ feichai:
     sessionTimeout: 1800000
     cookieTimeout: 86400
     # 免认证路径配置
-    anonUrl: /css/**,/js/**,/fonts/**,/img/**,/druid/**,/test/**,/user/regist,/gifCode,/
+    anonUrl: /css/**,/js/**,/fonts/**,/img/**,/druid/**,/test/**,/user/regist,/gifCode,/,/actuator/**,/test/**
     loginurl: /login
     logoutUrl: /logout
     unauthorizedUrl: /403
