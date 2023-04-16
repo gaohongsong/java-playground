@@ -31,15 +31,15 @@ public class ShiroConfig {
     @Autowired
     private FeichaiProperties feichaiProperties;
 
-    @Value("{spring.redis.host}")
+    @Value("${spring.redis.host}")
     private String host;
-    @Value("{spring.redis.port}")
+    @Value("${spring.redis.port}")
     private int port;
-    @Value("{spring.redis.password}")
+    @Value("${spring.redis.password}")
     private String password;
-    @Value("{spring.redis.timeout}")
+    @Value("${spring.redis.timeout}")
     private int timeout;
-    @Value("{spring.redis.database:0}")
+    @Value("${spring.redis.database:0}")
     private int database;
 
     private RedisManager redisManager() {
