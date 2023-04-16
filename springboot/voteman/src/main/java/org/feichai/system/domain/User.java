@@ -1,10 +1,19 @@
 package org.feichai.system.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "t_user")
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = -4852732617765810959L;
+
+    /**
+     * 账户状态
+     */
+    public static final String STATUS_VALID = "1";
+    public static final String STATUS_LOCK = "0";
+
     /**
      * 用户ID
      */

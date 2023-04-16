@@ -11,8 +11,9 @@ public class ShiroProperties {
     // rememberMe 有效时长，默认86400s，1天
     private int cookieTimeout = 86400;
 
-    private static String loginUrl = "/login";
-    private static String successUrl = "/index";
-    private static String logoutUrl = "/logout";
-    private static String unauthorizedUrl;
+    private String anonUrl;
+    private String loginUrl = "/login";
+    private String successUrl = "/index";
+    private String logoutUrl = "/logout";
+    private String unauthorizedUrl;
 }
