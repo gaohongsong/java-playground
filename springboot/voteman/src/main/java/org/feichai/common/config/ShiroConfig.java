@@ -66,7 +66,7 @@ public class ShiroConfig {
     private SimpleCookie rememberMeCookie() {
         // 设置cookie名称
         SimpleCookie cookie = new SimpleCookie("rememberMe");
-        cookie.setMaxAge(feichaiProperties.getShiroProperties().getCookieTimeout());
+        cookie.setMaxAge(feichaiProperties.getShiro().getCookieTimeout());
         return cookie;
     }
 
@@ -98,7 +98,7 @@ public class ShiroConfig {
         listeners.add(new ShiroSessionListener());
 
         // 设置session超时时间ms
-        sessionManager.setGlobalSessionTimeout(feichaiProperties.getShiroProperties().getSessionTimeout());
+        sessionManager.setGlobalSessionTimeout(feichaiProperties.getShiro().getSessionTimeout());
         sessionManager.setSessionListeners(listeners);
         sessionManager.setSessionDAO(redisSessionDAO());
         sessionManager.setSessionIdUrlRewritingEnabled(false);
@@ -125,7 +125,7 @@ public class ShiroConfig {
 
     @Bean
     public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
-        ShiroProperties shiroProperties = feichaiProperties.getShiroProperties();
+        ShiroProperties shiroProperties = feichaiProperties.getShiro();
 
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 
@@ -142,13 +142,10 @@ public class ShiroConfig {
         // 免认证路由配置
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
 
-        System.out.println("-------------------------");
-        System.out.println(shiroProperties.getAnonUrl());
-        System.out.println(shiroProperties.getLoginUrl());
         String[] anonUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(shiroProperties.getAnonUrl(), ",");
-//        for (String url : anonUrls) {
-//            filterChainDefinitionMap.put(url, "anon");
-//        }
+        for (String url : anonUrls) {
+            filterChainDefinitionMap.put(url, "anon");
+        }
 
         filterChainDefinitionMap.put(shiroProperties.getLogoutUrl(), "logout");
         filterChainDefinitionMap.put("/**", "user");

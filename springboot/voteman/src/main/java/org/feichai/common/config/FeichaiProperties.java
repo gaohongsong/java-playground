@@ -10,8 +10,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "feichai")
 public class FeichaiProperties {
-    private ShiroProperties shiroProperties = new ShiroProperties();
-    private ValidateCodeProperties validateCodeProperties = new ValidateCodeProperties();
+    // 变量名需要和yaml中的key保持一致
+    private ShiroProperties shiro = new ShiroProperties();
+    private ValidateCodeProperties validateCode = new ValidateCodeProperties();
     private String timeFormat = "yyyy-MM-dd HH:mm:ss";
     private boolean openAopLog = true;
 }
