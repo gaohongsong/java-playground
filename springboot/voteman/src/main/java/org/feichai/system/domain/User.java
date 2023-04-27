@@ -1,10 +1,13 @@
 package org.feichai.system.domain;
 
+import lombok.ToString;
+
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "t_user")
+@ToString
 public class User implements Serializable {
     private static final long serialVersionUID = -4852732617765810959L;
 
@@ -18,6 +21,7 @@ public class User implements Serializable {
      * 用户ID
      */
     @Id
+    @GeneratedValue(generator = "JDBC")
     @Column(name = "USER_ID")
     private Long userId;
 
@@ -349,5 +353,16 @@ public class User implements Serializable {
      */
     public void setDescription(String description) {
         this.description = description == null ? null : description.trim();
+    }
+
+    /**
+     * We need a field to identify this Cache Object in Redis. So you need to defined an id field which you can get
+     * unique id to identify this principal. For example, if you use UserInfo as Principal class, the id field maybe
+     * userId, userName, email, etc. For example, getUserId(), getUserName(), getEmail(), etc.
+     * Default value is authCacheKey or id, that means your principal object has a method called "getAuthCacheKey()"
+     * or "getId()"
+     */
+    public Long getAuthCacheKey() {
+        return userId;
     }
 }
