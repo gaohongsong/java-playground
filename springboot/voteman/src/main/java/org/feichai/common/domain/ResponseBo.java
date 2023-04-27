@@ -9,14 +9,14 @@ public class ResponseBo extends HashMap<String, Object> {
     private static final Integer WARN = 1;
     private static final Integer FAIL = 500;
 
-    public static ResponseBo resp(Integer code, String msg) {
+    public static ResponseBo resp(Integer code, Object msg) {
         ResponseBo responseBo = new ResponseBo();
         responseBo.put("code", code);
         responseBo.put("msg", msg);
         return responseBo;
     }
 
-    public static ResponseBo ok(String msg) {
+    public static ResponseBo ok(Object msg) {
         return ResponseBo.resp(SUCCESS, msg);
     }
 

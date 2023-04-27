@@ -24,4 +24,15 @@
         left join t_menu m on(m.menu_id = rm.menu_id)
       where u.username=#{userName} and m.perms is not null and m.perms != ''
     </select>
+    <select id="findUserMenus" resultMap="BaseResultMap">
+      select m.* from t_menu m
+        where m.TYPE != 1 and m.MENU_ID in (
+            select distinct rm.MENU_ID from t_role_menu rm
+            left join t_role tr on rm.ROLE_ID = tr.ROLE_ID
+            left join t_user_role tur on rm.ROLE_ID = tur.ROLE_ID
+            left join t_user tu on tur.USER_ID = tu.USER_ID
+            where tu.USERNAME= #{userName}
+          )
+        order by m.CREATE_TIME
+    </select>
 </mapper>

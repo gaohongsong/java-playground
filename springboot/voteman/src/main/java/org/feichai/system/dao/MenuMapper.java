@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface MenuMapper extends MyMapper<Menu> {
     List<Menu> findUserPermissions(String userName);
+
+    List<Menu> findUserMenus(String userName);
 }
