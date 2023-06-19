@@ -139,7 +139,7 @@ feichai:
   validateCode:
     width: 146
     height: 33
-    length: 44
+    length: 4
 
 #imagePath:
 imagePath: /Users/gaomugong/IdeaProjects/java-playground/springboot/voteman/media/images/
