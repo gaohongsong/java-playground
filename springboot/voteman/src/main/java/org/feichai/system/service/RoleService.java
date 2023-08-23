@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface RoleService extends IService<Role> {
     List<Role> findUserRole(String userName);
+
+    List<Role> findAllRole(Role role);
 }

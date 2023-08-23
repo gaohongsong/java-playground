@@ -44,7 +44,22 @@ public class BaseController {
     }
 
     protected Map<String, Object> selectByPageNumSize(QueryRequest request, Supplier<?> s) {
-        PageHelper.startPage(request.getPageNum(), request.getPageSize());
+        int startPage;
+        if (request.getPageNum() == 0) {
+            startPage = 1;
+        } else {
+            startPage = request.getPageNum();
+        }
+
+        int pageSize;
+        if (request.getPageSize() == 0) {
+            pageSize = 10000;
+        } else {
+            pageSize = request.getPageSize();
+        }
+
+        // PageHelper.startPage(request.getPageNum(), request.getPageSize());
+        PageHelper.startPage(startPage, pageSize);
         PageInfo<?> pageInfo = new PageInfo<>((List<?>) s.get());
         PageHelper.clearPage();
         return getDataTable(pageInfo);
