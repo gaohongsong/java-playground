@@ -30,6 +30,6 @@
         <if test="status != null and status != ''">and u.status = #{status}</if>
         <if test="deptId != null and deptId != ''">and d.dept_id = #{deptId}</if>
       </where>
-      order by u.user_id;
+      order by u.user_id
     </select>
 </mapper>

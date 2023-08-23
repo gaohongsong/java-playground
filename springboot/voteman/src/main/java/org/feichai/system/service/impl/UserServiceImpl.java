@@ -1,6 +1,7 @@
 package org.feichai.system.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.feichai.common.domain.QueryRequest;
 import org.feichai.common.service.impl.BaseService;
 import org.feichai.system.dao.UserMapper;
 import org.feichai.system.domain.User;
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -38,5 +40,15 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
         User user = new User();
         user.setLastLoginTime(new Date());
         this.userMapper.updateByExampleSelective(user, example);
+    }
+
+    @Override
+    public List<User> findUserWithDept(User user, QueryRequest request) {
+        try {
+            return this.userMapper.findUserWithDept(user);
+        } catch (Exception e) {
+            log.error("error", e);
+            return new ArrayList<>();
+        }
     }
 }
