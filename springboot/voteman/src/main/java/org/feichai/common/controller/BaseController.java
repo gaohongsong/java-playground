@@ -44,23 +44,14 @@ public class BaseController {
     }
 
     protected Map<String, Object> selectByPageNumSize(QueryRequest request, Supplier<?> s) {
-        int startPage;
-        if (request.getPageNum() == 0) {
-            startPage = 1;
-        } else {
-            startPage = request.getPageNum();
-        }
-
-        int pageSize;
-        if (request.getPageSize() == 0) {
-            pageSize = 10000;
-        } else {
-            pageSize = request.getPageSize();
-        }
+        // 支持全量返回
+        List<?> dataList = (List<?>) s.get();
+        int pageNum = (request.getPageNum() == 0) ? 1 : request.getPageNum();
+        int pageSize = (request.getPageSize() == 0) ? dataList.size() : request.getPageSize();
 
         // PageHelper.startPage(request.getPageNum(), request.getPageSize());
-        PageHelper.startPage(startPage, pageSize);
-        PageInfo<?> pageInfo = new PageInfo<>((List<?>) s.get());
+        PageHelper.startPage(pageNum, pageSize);
+        PageInfo<?> pageInfo = new PageInfo<>(dataList);
         PageHelper.clearPage();
         return getDataTable(pageInfo);
     }
