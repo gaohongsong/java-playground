@@ -49,9 +49,10 @@ public class BaseController {
         int pageNum = (request.getPageNum() == 0) ? 1 : request.getPageNum();
         int pageSize = (request.getPageSize() == 0) ? dataList.size() : request.getPageSize();
 
-        // PageHelper.startPage(request.getPageNum(), request.getPageSize());
-        PageHelper.startPage(pageNum, pageSize);
-        PageInfo<?> pageInfo = new PageInfo<>(dataList);
+        PageHelper.startPage(request.getPageNum(), request.getPageSize());
+        // PageHelper.startPage(pageNum, pageSize);
+        // PageInfo<?> pageInfo = new PageInfo<>(dataList);
+        PageInfo<?> pageInfo = new PageInfo<>((List<?>) s.get());
         PageHelper.clearPage();
         return getDataTable(pageInfo);
     }
