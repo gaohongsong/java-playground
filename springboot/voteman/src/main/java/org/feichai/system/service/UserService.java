@@ -14,4 +14,6 @@ public interface UserService extends IService<User> {
     List<User> findUserWithDept(User user, QueryRequest request);
 
     void addUser(User user, Long[] roles);
+
+    void deleteUsers(String ids);
 }

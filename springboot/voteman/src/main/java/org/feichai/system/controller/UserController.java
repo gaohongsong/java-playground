@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -54,6 +55,18 @@ public class UserController extends BaseController {
         } catch (Exception e) {
             log.error("新增用户失败", e);
             return ResponseBo.error("新增用户失败，请联系管理员!");
+        }
+    }
+
+    @PostMapping("user/delete")
+    @ResponseBody
+    public ResponseBo deleteUsers(String ids) {
+        try {
+            this.userService.deleteUsers(ids);
+            return ResponseBo.ok("删除用户成功");
+        } catch (Exception e) {
+            log.error("删除用户失败", e);
+            return ResponseBo.error("删除用户失败，请联系管理员!");
         }
     }
 }

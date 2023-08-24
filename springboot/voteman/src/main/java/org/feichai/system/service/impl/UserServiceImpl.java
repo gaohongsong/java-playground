@@ -8,6 +8,7 @@ import org.feichai.system.dao.UserMapper;
 import org.feichai.system.dao.UserRoleMapper;
 import org.feichai.system.domain.User;
 import org.feichai.system.domain.UserRole;
+import org.feichai.system.service.UserRoleService;
 import org.feichai.system.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +30,9 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
 
     @Autowired
     private UserRoleMapper userRoleMapper;
+
+    @Autowired
+    private UserRoleService userRoleService;
 
     @Override
     public User findByName(String userName) {
@@ -70,6 +74,13 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
 
         setUserRoles(user, roles);
 
+    }
+
+    @Override
+    public void deleteUsers(String userIds) {
+        List<String> ids = Arrays.asList(userIds.split(","));
+        this.batchDelete(ids, "userId", User.class);
+        this.userRoleService.deleteUserRolesByUserId(userIds);
     }
 
     private void setUserRoles(User user, Long[] roles) {
