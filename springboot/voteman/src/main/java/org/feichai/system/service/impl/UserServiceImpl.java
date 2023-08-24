@@ -3,8 +3,11 @@ package org.feichai.system.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.feichai.common.domain.QueryRequest;
 import org.feichai.common.service.impl.BaseService;
+import org.feichai.common.util.MD5Utils;
 import org.feichai.system.dao.UserMapper;
+import org.feichai.system.dao.UserRoleMapper;
 import org.feichai.system.domain.User;
+import org.feichai.system.domain.UserRole;
 import org.feichai.system.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -22,6 +26,9 @@ import java.util.List;
 public class UserServiceImpl extends BaseService<User> implements UserService {
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private UserRoleMapper userRoleMapper;
 
     @Override
     public User findByName(String userName) {
@@ -50,5 +57,27 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
             log.error("error", e);
             return new ArrayList<>();
         }
+    }
+
+    @Override
+    @Transactional
+    public void addUser(User user, Long[] roles) {
+        user.setCrateTime(new Date());
+        user.setTheme(User.DEFAULT_THEME);
+        user.setAvatar(User.DEFAULT_AVATAR);
+        user.setPassword(MD5Utils.encrypt(user.getUsername(), user.getPassword()));
+        this.save(user);
+
+        setUserRoles(user, roles);
+
+    }
+
+    private void setUserRoles(User user, Long[] roles) {
+        Arrays.stream(roles).forEach(roleId -> {
+            UserRole userRole = new UserRole();
+            userRole.setUserId(user.getUserId());
+            userRole.setRoleId(roleId);
+            this.userRoleMapper.insert(userRole);
+        });
     }
 }

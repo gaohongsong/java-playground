@@ -17,6 +17,9 @@ public class User implements Serializable {
     public static final String STATUS_VALID = "1";
     public static final String STATUS_LOCK = "0";
 
+    public static final String DEFAULT_THEME = "green";
+    public static final String DEFAULT_AVATAR = "default.jpg";
+
     /**
      * 用户ID
      */

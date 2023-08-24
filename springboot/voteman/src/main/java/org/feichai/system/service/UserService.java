@@ -12,4 +12,6 @@ public interface UserService extends IService<User> {
     void updateLoginTime(String username);
 
     List<User> findUserWithDept(User user, QueryRequest request);
+
+    void addUser(User user, Long[] roles);
 }
