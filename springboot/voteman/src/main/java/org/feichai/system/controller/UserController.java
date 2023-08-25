@@ -99,4 +99,16 @@ public class UserController extends BaseController {
             return ResponseBo.error("删除用户失败，请联系管理员!");
         }
     }
+
+    @RequestMapping("user/excel")
+    @ResponseBody
+    public ResponseBo userExcel(User user) {
+        try {
+            List<User> users = this.userService.findUserWithDept(user, null);
+            return ResponseBo.ok("删除用户成功");
+        } catch (Exception e) {
+            log.error("删除用户失败", e);
+            return ResponseBo.error("删除用户失败，请联系管理员!");
+        }
+    }
 }
