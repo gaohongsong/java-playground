@@ -8,6 +8,7 @@ import org.feichai.system.dao.UserMapper;
 import org.feichai.system.dao.UserRoleMapper;
 import org.feichai.system.domain.User;
 import org.feichai.system.domain.UserRole;
+import org.feichai.system.domain.UserWithRole;
 import org.feichai.system.service.UserRoleService;
 import org.feichai.system.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,18 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
     }
 
     @Override
+    public UserWithRole findById(Long userId) {
+        List<UserWithRole> userRoleList = this.userMapper.findUserWithRole(userId);
+        if(userRoleList.isEmpty()) return null;
+
+        List<Long> roleList = userRoleList.stream().map(UserWithRole::getRoleId).toList();
+        UserWithRole userWithRole = userRoleList.get(0);
+        userWithRole.setRoleIds(roleList);
+
+        return userWithRole;
+    }
+
+    @Override
     @Transactional
     public void updateLoginTime(String userName) {
         Example example = new Example(User.class);
@@ -74,6 +87,22 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
 
         setUserRoles(user, roles);
 
+    }
+
+    @Override
+    @Transactional
+    public void updateUser(User user, Long[] roles) {
+        user.setPassword(null);
+        user.setUsername(null);
+        user.setModifyTime(new Date());
+        this.updateNotNull(user);
+
+        // clean all roles of user
+        Example example = new Example(User.class);
+        example.createCriteria().andCondition("user_id=", user.getUserId());
+        this.userRoleMapper.deleteByExample(example);
+
+        setUserRoles(user, roles);
     }
 
     @Override

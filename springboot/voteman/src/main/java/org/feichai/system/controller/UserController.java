@@ -58,6 +58,36 @@ public class UserController extends BaseController {
         }
     }
 
+    @PostMapping("user/update")
+    @ResponseBody
+    public ResponseBo updateUser(User user, Long[] rolesSelect) {
+        try {
+            if(user.getStatus().equalsIgnoreCase("on")) {
+                user.setStatus(User.STATUS_VALID);
+            } else {
+                user.setStatus(User.STATUS_LOCK);
+            }
+
+            this.userService.updateUser(user, rolesSelect);
+            return ResponseBo.ok("新增用户成功");
+        } catch (Exception e) {
+            log.error("新增用户失败", e);
+            return ResponseBo.error("新增用户失败，请联系管理员!");
+        }
+    }
+
+    @PostMapping("user/getUser")
+    @ResponseBody
+    public ResponseBo getUser(Long userId) {
+        try {
+            User user = this.userService.findById(userId);
+            return ResponseBo.ok(user);
+        } catch (Exception e) {
+            log.error("获取用户失败", e);
+            return ResponseBo.error("获取用户失败，请联系管理员!");
+        }
+    }
+
     @PostMapping("user/delete")
     @ResponseBody
     public ResponseBo deleteUsers(String ids) {

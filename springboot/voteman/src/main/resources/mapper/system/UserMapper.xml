@@ -32,4 +32,12 @@
       </where>
       order by u.user_id
     </select>
+  <select id="findUserWithRole" resultType="org.feichai.system.domain.UserWithRole">
+    select u.username, u.email, u.mobile, u.status, u.crate_time, u.ssex,
+           u.user_id as userId,
+           u.dept_id as deptId,
+           ur.role_id as roleId
+    from t_user u left join t_user_role ur on ur.user_id = u.user_id
+    where u.user_id = #{userId}
+  </select>
 </mapper>
