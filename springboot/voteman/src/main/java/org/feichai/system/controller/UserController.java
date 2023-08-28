@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.feichai.common.controller.BaseController;
 import org.feichai.common.domain.QueryRequest;
 import org.feichai.common.domain.ResponseBo;
+import org.feichai.common.util.FileUtil;
 import org.feichai.system.domain.User;
 import org.feichai.system.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -105,7 +106,7 @@ public class UserController extends BaseController {
     public ResponseBo userExcel(User user) {
         try {
             List<User> users = this.userService.findUserWithDept(user, null);
-            return ResponseBo.ok("删除用户成功");
+            return FileUtil.createExcelByPOIKit("用户表", users, User.class);
         } catch (Exception e) {
             log.error("删除用户失败", e);
             return ResponseBo.error("删除用户失败，请联系管理员!");

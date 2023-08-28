@@ -1,6 +1,7 @@
 package org.feichai.system.domain;
 
 import lombok.ToString;
+import org.feichai.common.annotation.ExportConfig;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -32,6 +33,7 @@ public class User implements Serializable {
      * 用户名
      */
     @Column(name = "USERNAME")
+    @ExportConfig("用户名")
     private String username;
 
     /**
@@ -50,24 +52,28 @@ public class User implements Serializable {
      * 邮箱
      */
     @Column(name = "EMAIL")
+    @ExportConfig(value = "邮箱")
     private String email;
 
     /**
      * 联系电话
      */
     @Column(name = "MOBILE")
+    @ExportConfig(value = "手机")
     private String mobile;
 
     /**
      * 状态 0锁定 1有效
      */
     @Column(name = "STATUS")
+    @ExportConfig(value = "状态", convert = "s:0=锁定,1=有效")
     private String status;
 
     /**
      * 创建时间
      */
     @Column(name = "CRATE_TIME")
+    @ExportConfig(value = "创建时间", convert = "c:org.feichai.common.util.poi.convert.TimeConvert")
     private Date crateTime;
 
     /**
@@ -86,6 +92,7 @@ public class User implements Serializable {
      * 性别 0男 1女
      */
     @Column(name = "SSEX")
+    @ExportConfig(value = "性别", convert = "s:0=男,1=女,2=保密")
     private String ssex;
 
     /**
