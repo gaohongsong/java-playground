@@ -9,4 +9,5 @@ public interface MenuMapper extends MyMapper<Menu> {
     List<Menu> findUserPermissions(String userName);
 
     List<Menu> findUserMenus(String userName);
+    List<Menu> findMenus(String menuName, String type);
 }

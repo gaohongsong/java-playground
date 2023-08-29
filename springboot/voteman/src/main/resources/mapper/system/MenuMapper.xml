@@ -35,4 +35,12 @@
           )
         order by m.CREATE_TIME
     </select>
+    <select id="findMenus" resultMap="BaseResultMap">
+        select * from t_menu m
+        <where>
+          <if test="menuName != null and menuName != ''">and m.MENU_NAME = #{menuName}</if>
+          <if test="type != null and type != ''">and m.TYPE = #{type}</if>
+        </where>
+        order by m.CREATE_TIME desc
+    </select>
 </mapper>

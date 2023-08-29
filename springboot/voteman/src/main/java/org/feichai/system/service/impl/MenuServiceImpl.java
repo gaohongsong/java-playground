@@ -1,5 +1,6 @@
 package org.feichai.system.service.impl;
 
+import org.apache.commons.lang3.StringUtils;
 import org.feichai.common.domain.Tree;
 import org.feichai.common.service.impl.BaseService;
 import org.feichai.common.util.TreeUtils;
@@ -10,8 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service("menuService")
@@ -29,6 +32,26 @@ public class MenuServiceImpl extends BaseService<Menu> implements MenuService {
     @Override
     public List<Menu> findUserMenus(String userName) {
         return this.menuMapper.findUserMenus(userName);
+    }
+
+    @Override
+    public List<Menu> findAllMenu(Menu menu) {
+        try {
+            Example example = new Example(Menu.class);
+            Example.Criteria criteria = example.createCriteria();
+            if (StringUtils.isNotBlank(menu.getMenuName())) {
+                // criteria.andCondition("menu_name=", menu.getMenuName());
+                criteria.andCondition("menu_name like", "%" + menu.getMenuName() +"%");
+            }
+            if (StringUtils.isNotBlank(menu.getType())) {
+                criteria.andCondition("type=", menu.getType());
+            }
+
+            example.setOrderByClause("menu_id");
+            return this.selectByExample(example);
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
     }
 
     @Override

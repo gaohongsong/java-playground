@@ -11,11 +11,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Slf4j
 @Controller
 public class MenuController extends BaseController {
     @Autowired
     private MenuService menuService;
+
+    @RequestMapping("menu")
+    public String index() {
+        return "system/menu/menu";
+    }
+
+    @RequestMapping("menu/list")
+    @ResponseBody
+    public List<Menu> menuList(Menu menu) {
+        return this.menuService.findAllMenu(menu);
+    }
 
     @RequestMapping("menu/getUserMenu")
     @ResponseBody

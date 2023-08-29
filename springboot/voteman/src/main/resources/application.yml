@@ -116,8 +116,9 @@ mybatis:
   mapper-locations: classpath:mapper/*/*.xml
   configuration:
     jdbc-type-for-null: null
+    # 打印所有sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   type-handlers-package: org.feichai.common.util.enums
-
 mapper:
   mappers: org.feichai.common.config.MyMapper
   not-empty: false
