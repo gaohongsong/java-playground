@@ -1,6 +1,7 @@
 package org.feichai.system.service.impl;
 
 import org.apache.commons.lang3.StringUtils;
+import org.feichai.common.domain.QueryRequest;
 import org.feichai.common.domain.Tree;
 import org.feichai.common.service.impl.BaseService;
 import org.feichai.common.util.TreeUtils;
@@ -32,10 +33,10 @@ public class DictServiceImpl extends BaseService<Dict> implements DictService {
                 criteria.andCondition("keyy=", Long.valueOf(dict.getKeyy()));
             }
             if (StringUtils.isNotBlank(dict.getValuee())) {
-                criteria.andCondition("valuee=", dict.getFieldName());
+                criteria.andCondition("valuee=", dict.getValuee());
             }
             if (StringUtils.isNotBlank(dict.getTableName())) {
-                criteria.andCondition("table_name=", dict.getFieldName());
+                criteria.andCondition("table_name=", dict.getTableName());
             }
             if (StringUtils.isNotBlank(dict.getFieldName())) {
                 criteria.andCondition("field_name=", dict.getFieldName());

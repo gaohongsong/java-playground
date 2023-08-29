@@ -1,5 +1,6 @@
 package org.feichai.system.service;
 
+import org.feichai.common.domain.QueryRequest;
 import org.feichai.common.service.IService;
 import org.feichai.system.domain.Dict;
 import org.springframework.cache.annotation.CacheConfig;
