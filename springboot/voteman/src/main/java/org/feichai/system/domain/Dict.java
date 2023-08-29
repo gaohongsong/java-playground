@@ -15,7 +15,7 @@ public class Dict {
      * 键
      */
     @Column(name = "KEYY")
-    private Long keyy;
+    private String keyy;
 
     /**
      * 值
@@ -58,7 +58,7 @@ public class Dict {
      *
      * @return KEYY - 键
      */
-    public Long getKeyy() {
+    public String getKeyy() {
         return keyy;
     }
 
@@ -67,7 +67,7 @@ public class Dict {
      *
      * @param keyy 键
      */
-    public void setKeyy(Long keyy) {
+    public void setKeyy(String keyy) {
         this.keyy = keyy;
     }
 
